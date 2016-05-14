@@ -25,10 +25,13 @@ const barrels: string[] = [
 
   // Thirdparty barrels.
   'rxjs',
-
+  '@ngrx/store',
   // App specific barrels.
   'app',
   'app/shared',
+  'app/city-weather-item',
+  'app/city-form',
+  'app/city-list',
   /** @cli-barrel */
 ];
 
@@ -37,6 +40,8 @@ barrels.forEach((barrelName: string) => {
   cliSystemConfigPackages[barrelName] = { main: 'index' };
 });
 
+cliSystemConfigPackages['@ngrx/devtools'] = { main: 'dist/index' };
+
 /** Type declaration for ambient System. */
 declare var System: any;
 
@@ -44,6 +49,7 @@ declare var System: any;
 System.config({
   map: {
     '@angular': 'vendor/@angular',
+    '@ngrx': 'vendor/@ngrx',
     'rxjs': 'vendor/rxjs',
     'main': 'main.js'
   },

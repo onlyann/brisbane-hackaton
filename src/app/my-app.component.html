@@ -1,0 +1,15 @@
+<style>
+  #addCity { width: 25%; float: left;}
+  #cities { width: 35%; float: left;}
+</style>
+
+<h1>Weather around the world</h1>
+<button (click)="onRefresh()">Refresh</button>
+<section id="addCity">
+  <city-form (add)="onAdd($event)"></city-form>
+</section>
+<section id="cities">
+  <city-list [cities]="cities$ | async"></city-list> 
+</section>
+
+<ngrx-devtools></ngrx-devtools>

@@ -1,0 +1,13 @@
+<form (submit)="add.emit(city)">
+  <div>
+    <label for="city">City</label>
+    <input id="city" type="text" [(ngModel)]="city.City" />
+  </div>
+  <div>
+    <label for="temperature">Temperature</label>
+    <input id="temperature" type="number" [(ngModel)]="city.Temperature" />
+  </div>
+
+
+  <button type="submit">Add</button>
+</form>

@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let item of cities">
+    <city-weather-item [item]="item" (delete)="onDelete($event)"></city-weather-item>
+  </li>
+</ul>
